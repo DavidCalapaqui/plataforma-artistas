@@ -45,8 +45,8 @@ public class Artista implements Serializable  {
 	public String linkFacebook;
 	@Column(name="link_instagram")
 	public String linkInstagram;
-	@Column(name="link_twitwr")
-	public String linkTwiter;
+	@Column(name="link_twitter")
+	public String linkTwitter;
 	public Artista() {
 		super();
 	}
@@ -129,15 +129,18 @@ public class Artista implements Serializable  {
 		this.linkInstagram = linkInstagram;
 	}
 
-	public String getLinkTwiter() {
-		return linkTwiter;
+	
+	
+	public String getLinkTwitter() {
+		return linkTwitter;
 	}
 
-	public void setLinkTwiter(String linkTwiter) {
-		this.linkTwiter = linkTwiter;
+	public void setLinkTwitter(String linkTwitter) {
+		this.linkTwitter = linkTwitter;
 	}
-	//relaciones
 	
+
+	//relaciones
 	
 	@OneToMany(mappedBy= "artista",fetch=FetchType.LAZY)
 	private List<Integrante> integrantes;
